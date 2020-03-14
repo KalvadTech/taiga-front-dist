@@ -12,3 +12,5 @@ cat <<EOF > dist/conf.json
 	"contribPlugins": []
 }
 EOF
+
+cp clevercloud/.htaccess dist/
