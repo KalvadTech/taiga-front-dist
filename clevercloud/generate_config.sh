@@ -1,7 +1,7 @@
 cat <<EOF > dist/conf.json
 {
 	"api": "https://api-$TAIGA_DOMAIN/api/v1/",
-	"eventsUrl": "wss://api-$TAIGA_DOMAIN/events",
+	"eventsUrl": "wss://events-$TAIGA_DOMAIN/",
 	"debug": "$DEBUG",
 	"publicRegisterEnabled": $PUBLIC_REGISTER_ENABLED,
 	"feedbackEnabled": true,
