@@ -9,8 +9,17 @@ cat <<EOF > dist/conf.json
 	"termsOfServiceUrl": null,
 	"GDPRUrl": null,
 	"maxUploadFileSize": null,
-	"contribPlugins": []
+	"contribPlugins": ["/plugins/slack/slack.json"]
 }
 EOF
 
 cp clevercloud/.htaccess dist/
+
+cd dist/
+mkdir -p plugins
+cd plugins
+wget https://github.com/taigaio/taiga-contrib-slack/archive/3.1.tar.gz
+tar -xvzf 3.1.tar.gz
+mv taiga-contrib-slack-3.1/front/dist slack
+rm -rf taiga-contrib-slack-3.1
+rm -rf 3.1.tar.gz
